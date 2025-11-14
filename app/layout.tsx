@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: process.env.APP_name,
+  title: process.env.APP_NAME,
   description: "Tiara AI Teman Curhatmu",
 };
 
