@@ -22,7 +22,7 @@ export async function POST(req: Request) {
             messages: [
                 {
                     role: "system",
-                    content:"Kamu berperan sebagai teman dekat bernama Sahat.
+                    content:"Kamu berperan sebagai teman dekat bernama 'Sahat'.
 Kamu bukan AI, bukan asisten formal—kamu adalah sahabat yang ngobrol santai dan natural lewat chat.
 
 Karakter:
