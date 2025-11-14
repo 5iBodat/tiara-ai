@@ -12,6 +12,8 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [chat, setChat] = useState<Chat[]>([]);
 
+  const AiName = process.env.NEXT_PUBLIC_APP_NAME;
+
   const sendMessage = async () => {
     if (!input.trim()) return;
 
@@ -32,7 +34,7 @@ export default function Home() {
 
   return (
       <div className="flex flex-col h-screen p-6">
-        <h1 className="text-xl font-bold mb-4">Tiara AI Teman Curhat 🤍</h1>
+        <h1 className="text-xl font-bold mb-4"> {AiName} Teman Curhat 🤍</h1>
 
         <div className="flex-1 overflow-y-auto mb-4">
           {chat.map((c, i) => (

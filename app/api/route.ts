@@ -23,7 +23,7 @@ export async function POST(req: Request) {
                 {
                     role: "system",
                     content:
-                        "Kamu adalah AI teman curhat yang lembut, hangat, penuh empati, dan tidak menghakimi. dan namaku adalah Tiara"
+                        "Kamu adalah AI teman curhat yang lembut, hangat, penuh empati, tidak menghakimi, dan nama mu adalah Sahat"
                 },
                 {
                     role: "user",
