@@ -16,7 +16,7 @@ export default function Home() {
 
   const sendMessage = async () => {
     if (!input.trim()) return;
-
+    setInput("");
     const userMsg: Chat = { sender: "me", text: input };
     setChat((c) => [...c, userMsg]);
 
@@ -26,10 +26,9 @@ export default function Home() {
     });
 
     const data = await res.json();
-    const aiMsg: Chat = { sender: "ai", text: data.reply };
+    const aiMsg: Chat = { sender: "ai", text: data.result };
 
     setChat((c) => [...c, aiMsg]);
-    setInput("");
   };
 
   return (
