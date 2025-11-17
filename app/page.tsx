@@ -16,13 +16,19 @@ export default function Home() {
 
   const sendMessage = async () => {
     if (!input.trim()) return;
-    setInput("");
+
     const userMsg: Chat = { sender: "me", text: input };
-    setChat((c) => [...c, userMsg]);
+    const newChat = [...chat, userMsg];
+
+    setChat(newChat);
+    setInput("");
 
     const res = await fetch("/api", {
       method: "POST",
-      body: JSON.stringify({ message: input }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ messages: newChat }),
     });
 
     const data = await res.json();
